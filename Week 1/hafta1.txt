@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------------
+hello world yaz
++quote yazdır
+	amaç kendiniz yazmalısınız mesajı vermek
++sizeof ile variable size bastır
+	sizeof fonksiyonundan ld yani long double döner öğret 
+	(formatları kendileri araştırabilirler)
+	3.14 ün size double ile aynı demek ki float değil
+math operation
+	convert yapma - bölmede floata dönüştürme - önce sonra arttırma
++x-y değiştirt
+	eşittir ve değer taşımayı öğretmek amaç
+logical operator 
+	tahta üzerinde sayılarla anlat
++?exercise gerekli değil gibi
+scanf char ve integer alıp basmayı dene
+	char yerine sayı girince neden bozulmuyor - ascii ye gir
++charı %d ile bastır sayıları görsünler
+	7 sayısını char ile bastır ascii tablosunu aç bell space göster
+
+-----------------------------------------------------------------------------------

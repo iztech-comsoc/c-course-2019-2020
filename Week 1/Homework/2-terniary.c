@@ -11,7 +11,7 @@ int main(){
 	int a=10,b=8;
 	int c=4;
 
-	c = (a>b) ? a: b;
+	c = (0>100) ? a: b;
 	
 	printf("a=%d  b=%d  c=%d",a,b,c);
 	return 0;
