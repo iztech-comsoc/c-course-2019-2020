@@ -6,13 +6,39 @@
 
     Hint: you can start by determining upper limit like this:
 	  9...9 > 9! * n	(n is digit cound)
-    Note: you are free to create new functions.
 */
 
 int digit_factorials() {
     int sum = 0;
-    
-    // implement your logic here and store result in "sum"    
+    int fact10[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
+
+    /*
+        Finding upper limit:
+
+        9...9 > 9! * n
+        10^n - 1 = 9! * n
+        10^n > 362.880‬ * n + 1 
+        n > log(362800) + logn
+        n - logn > log(362800) ~= 5.55
+        n - (n+1)/10 > 5.55     (log(n) ~= (n+1)/10 if 0 < n < 10)
+        9n > 56
+
+        n = 7, limit=9999999
+        
+    */
+
+    for (int n = 10; n <= 9999999; n++) {
+        int df_sum = 0, num = n;
+        
+        do {
+            int digit = num % 10;
+            df_sum += fact10[digit];
+        } while ((num /= 10) > 0 && df_sum <= n);
+
+        if (df_sum == n) {
+            sum += n;
+        }
+    }
 
     return sum;
 }

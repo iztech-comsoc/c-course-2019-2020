@@ -25,6 +25,35 @@
 			0		
 */
 
+int matrix_diagonal_sum_difference(int n, int matrix[][n]) {
+	int result = 0;
+	
+	for (int r = 0; r < n; r++) {
+		result += matrix[r][r] - matrix[r][n-r-1];
+	}
+	
+	return result;
+}
+
 int main() {
+	int N = -1;
+	scanf("%d", &N);
+
+	if (N < 1) {
+		perror("N cannot be less than 1!");
+		return 1;
+	}
+
+	int matrix[N][N];
+
+	for(int r = 0; r < N; r++) {
+		for(int c = 0; c < N; c++) {
+			scanf(" %d", &matrix[r][c]);
+		}
+		// scanf
+	}
+
+	printf("result: %d", matrix_diagonal_sum_difference(N, matrix));
+
 	return 0;
 }
